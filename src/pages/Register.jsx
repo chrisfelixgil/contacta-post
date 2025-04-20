@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-// Importar funciones de Firestore
+
 import {
   getFirestore,
   collection,
@@ -9,7 +9,7 @@ import {
   where,
   getDocs,
 } from 'firebase/firestore';
-import { db } from '../firebaseConfig'; // Importar solo db
+import { db } from '../firebaseConfig';
 import logo from '../img/conecta-post-logo.png';
 
 export default function Register() {
@@ -22,7 +22,7 @@ export default function Register() {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-  // No necesitamos getAuth
+
 
   async function handleRegister(event) {
     event.preventDefault();
@@ -56,12 +56,11 @@ export default function Register() {
       }
 
       // 2. Si no existe, crear el nuevo usuario en Firestore
-      // ADVERTENCIA: Guardando contraseña en texto plano (MUY INSEGURO)
       await addDoc(collection(db, "users"), {
         username: username,
         firstName: firstName,
         lastName: lastName,
-        password: password, // <-- Contraseña en texto plano!
+        password: password, 
         createdAt: new Date(),
       });
 

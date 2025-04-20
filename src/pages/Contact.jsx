@@ -29,19 +29,19 @@ export default function Contact() {
               Instagram: 
               <a href="#" className="text-primary-600 hover:underline dark:text-primary-500 ml-1"> 
                 @conectapostapp
-              </a> {/* Reemplaza # con el enlace real */} 
+              </a> 
             </li>
             <li>
               Twitter (X): 
               <a href="#" className="text-primary-600 hover:underline dark:text-primary-500 ml-1"> 
                 @conectapost
-              </a> {/* Reemplaza # con el enlace real */} 
+              </a> 
             </li>
             <li>
               Facebook: 
               <a href="#" className="text-primary-600 hover:underline dark:text-primary-500 ml-1"> 
                 Conecta Post Oficial
-              </a> {/* Reemplaza # con el enlace real */} 
+              </a> 
             </li>
           </ul>
         </div>

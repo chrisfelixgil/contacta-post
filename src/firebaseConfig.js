@@ -20,7 +20,6 @@ try {
   app = initializeApp(firebaseConfig);
 } catch (error) {
   console.error("Error initializing Firebase:", error);
-  // Podrías lanzar el error o manejarlo para mostrar un mensaje en la UI
 }
 
 const db = getFirestore(app);

@@ -1,5 +1,5 @@
 import { Link, NavLink, useNavigate } from 'react-router-dom';
-import { useState } from 'react'; // Solo para isMobileMenuOpen
+import { useState } from 'react'; 
 import logo from '../img/conecta-post-logo.png';
 import { useAuth } from '../context/AuthContext'; // Importar useAuth
 
@@ -9,8 +9,6 @@ export default function Navbar() {
   const navigate = useNavigate(); 
   const isAuthenticated = !!currentUser; 
 
-  // Ya no necesitamos useEffect para leer sessionStorage
-
   const getNavLinkClass = ({ isActive }) =>
     `block py-2 px-3 md:p-0 rounded-sm md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent ${isActive
       ? 'text-white bg-blue-700 md:bg-transparent md:text-blue-700 md:dark:text-blue-500'
@@ -18,7 +16,7 @@ export default function Navbar() {
     }`;
 
   function handleLogout() {
-    logout(); // <--- Usar función logout del contexto
+    logout(); 
     setIsMobileMenuOpen(false);
     navigate('/'); 
   }
@@ -28,7 +26,7 @@ export default function Navbar() {
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         
         {/* Izquierda: Logo + Enlaces principales */}
-        <div className="flex items-center space-x-8"> {/* Agrupador izquierda */} 
+        <div className="flex items-center space-x-8"> 
           <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
             <img src={logo} className="h-8" alt="ConectaPosts Logo" /> {/* Usar logo */}
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">

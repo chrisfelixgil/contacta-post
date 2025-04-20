@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getFirestore, collection, getDocs, query, orderBy } from 'firebase/firestore';
 import { db } from '../firebaseConfig';
-import PostCard from '../components/PostCard'; // Importar el componente de tarjeta
+import PostCard from '../components/PostCard'; 
 
 export default function Home() {
   const [posts, setPosts] = useState([]);

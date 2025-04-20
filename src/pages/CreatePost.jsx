@@ -88,7 +88,7 @@ export default function CreatePost() {
       const postData = {
         titulo: title,
         texto: text,
-        imageUrl: imageUrl, // <-- Guardar URL de Cloudinary
+        imageUrl: imageUrl, // Guardar URL de Cloudinary
         usuarioId: currentUser.id,
         nombreUsuario: `${currentUser.firstName || ''} ${currentUser.lastName || ''}`.trim(), 
         fecha: Timestamp.fromDate(new Date()),
@@ -97,7 +97,6 @@ export default function CreatePost() {
       // 3. Añadir el documento a Firestore
       await addDoc(collection(db, "posts"), postData);
 
-      // 4. Éxito
       alert('¡Publicación creada exitosamente!');
       navigate('/'); 
 

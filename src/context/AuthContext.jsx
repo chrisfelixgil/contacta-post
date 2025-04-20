@@ -49,11 +49,9 @@ export function AuthProvider({ children }) {
     currentUser,
     login,
     logout,
-    // Podríamos exponer loadingAuth si otros componentes necesitan esperar
-    // loadingAuth, 
+    
   };
 
-  // No renderizar children hasta que la autenticación inicial esté lista
   // para evitar parpadeos o estados inconsistentes.
   return (
     <AuthContext.Provider value={value}>

@@ -24,7 +24,7 @@ export default function PostCard({ post }) {
 
   return (
     <div className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl dark:border-gray-700 dark:bg-gray-800 w-full overflow-hidden h-full">
-      {/* Usamos un div en lugar de <a> si no va a ser un enlace */} 
+      
       {imageUrl && (
          <img 
           className="object-cover w-full h-48 md:h-full md:w-48 flex-shrink-0" // Permitir que la imagen ocupe h-full en desktop
@@ -32,7 +32,7 @@ export default function PostCard({ post }) {
           alt={`Imagen para ${titulo || 'post'}`} 
         />
       )}
-      <div className="flex flex-col justify-between p-4 leading-normal flex-grow"> {/* Añadir flex-grow */} 
+      <div className="flex flex-col justify-between p-4 leading-normal flex-grow"> 
         <div> {/* Agrupar título y texto */} 
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white break-words">
             {titulo || 'Sin título'}

@@ -23,8 +23,6 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    // Aquí puedes añadir una página de error general si quieres
-    // errorElement: <ErrorPage />,
     children: [
       {
         index: true, // Ruta raíz (/)
@@ -41,7 +39,6 @@ const router = createBrowserRouter([
       {
         path: '/create-post',
         element: <CreatePost />,
-        // Aquí podríamos añadir lógica para proteger esta ruta más adelante
       },
       {
         path: '/terms',

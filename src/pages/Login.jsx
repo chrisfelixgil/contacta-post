@@ -36,7 +36,7 @@ export default function Login() {
         return;
       }
 
-      // Asumimos que el username es único, tomamos el primer resultado
+      // El username es único, tomamos el primer resultado
       const userData = querySnapshot.docs[0].data();
       const userId = querySnapshot.docs[0].id; // Obtener ID del documento
 
