@@ -47,13 +47,14 @@ export default function Home() {
       {error && <p className="text-center text-red-500 dark:text-red-400">{error}</p>}
 
       {!loading && !error && (
-        <div className="grid grid-cols-1 gap-6">
+        // Usar Grid: 1 columna por defecto, 2 columnas en pantallas medianas (md) y mayores
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 place-items-center"> 
           {posts.length > 0 ? (
             posts.map(post => (
               <PostCard key={post.id} post={post} />
             ))
           ) : (
-            <p className="text-center text-gray-500 dark:text-gray-400">Aún no hay publicaciones.</p>
+            <p className="text-center text-gray-500 dark:text-gray-400 md:col-span-2">Aún no hay publicaciones.</p> // Asegurar que ocupe ambas columnas si está vacío
           )}
         </div>
       )}
