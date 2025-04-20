@@ -7,7 +7,7 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { currentUser, logout } = useAuth(); // Obtener estado y función del contexto
   const navigate = useNavigate(); 
-  const isAuthenticated = !!currentUser; // Derivar estado de autenticación
+  const isAuthenticated = !!currentUser; 
 
   // Ya no necesitamos useEffect para leer sessionStorage
 

@@ -15,13 +15,13 @@ La aplicación cuenta con una interfaz de usuario responsive y funcional, desarr
 
 ✨ Características:
 
-- ✅ **Gestión de Posts:** Crear, visualizar e interactuar con publicaciones. (Asumido)
-- ✅ **Autenticación de Usuarios:** Inicio de sesión y registro seguros mediante Firebase Authentication. (Inferido de la dependencia Firebase)
-- ✅ **Actualizaciones en Tiempo Real:** (Potencialmente) Actualizaciones de posts en tiempo real usando Firebase Firestore.
+- ✅ **Gestión de Posts:** Crear y visualizar las publicaciones.
+- ✅ **Autenticación de Usuarios:** Inicio de sesión y registro mediante Firebase.
+- ✅ **Actualizaciones en Tiempo Real:** Actualizaciones de posts en tiempo real usando Cloudinary.
 - ✅ **Diseño Responsive:** Interfaz adaptable a distintos dispositivos construida con Tailwind CSS y Flowbite.
 - ✅ **Enrutamiento del Lado del Cliente:** Navegación fluida implementada con React Router.
 
-Es la quineta y última tarea de la materia de Programación Web impartida por el profesor **Raydelto Hernández**.
+Es el proyecto final de la materia de Programación Web impartida por el profesor **Raydelto Hernández**.
 
 ---
 
@@ -49,7 +49,7 @@ Sigue estos pasos para obtener una copia local y ponerla en funcionamiento.
 *   pnpm (o npm/yarn)
 
 ```bash
-npm install -g pnpm # Si no tienes pnpm instalado
+npm install -g pnpm
 ```
 
 ### Instalación
@@ -57,7 +57,7 @@ npm install -g pnpm # Si no tienes pnpm instalado
 1.  🛠️ Clona este repositorio:
 
     ```bash
-    git clone <your-repository-url> # Reemplaza con la URL de tu repositorio
+    git clone https://github.com/chrisfelixgil/contacta-post.git
     cd conectaposts
     ```
 
@@ -90,55 +90,38 @@ pnpm dev
 4.  Abre tu navegador en:
 
     ```
-    http://localhost:5173 # O el puerto que indique Vite
+    http://localhost:5173
     ```
-
-### Compilar para Producción
-
-```bash
-pnpm build
-```
-Este comando compila la aplicación para producción en la carpeta `dist`.
-
-### Linting
-
-```bash
-pnpm lint
-```
-Revisa el código en busca de errores de linting con ESLint.
 
 ---
 
-## 🧱 Estructura del Proyecto (Sugerida)
+## 🧱 Estructura del Proyecto 
 
 ```
 conectaposts/
-├── public/             # Archivos estáticos
-├── src/                # Código fuente
-│   ├── assets/         # Recursos como imágenes, fuentes, etc.
-│   ├── components/     # Componentes React reutilizables
-│   ├── contexts/       # Contextos de React (ej. AuthContext)
-│   ├── hooks/          # Hooks personalizados de React
-│   ├── pages/          # Componentes de página (asociados a rutas)
-│   ├── routes/         # Configuración de enrutamiento (React Router)
-│   ├── services/       # Lógica de interacción con APIs (ej. funciones Firebase)
-│   ├── styles/         # Estilos globales o configuración de Tailwind
-│   ├── utils/          # Funciones de utilidad
-│   ├── App.jsx         # Componente principal de la aplicación
-│   ├── main.jsx        # Punto de entrada de la aplicación (renderizado inicial)
-│   └── firebase/       # Configuración e inicialización de Firebase
-├── .env.local          # Variables de entorno (claves Firebase, etc.) - No rastreado
-├── .eslintrc.js        # Configuración de ESLint
-├── .gitignore          # Reglas para Git ignore
-├── index.html          # Punto de entrada HTML para Vite
-├── package.json        # Metadatos y dependencias del proyecto
-├── pnpm-lock.yaml      # Lockfile de PNPM
-├── postcss.config.js   # Configuración de PostCSS
-├── tailwind.config.js  # Configuración de Tailwind CSS
-├── vite.config.js      # Configuración de Vite
-└── README.md           # Este archivo
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── context/
+│   ├── img/
+│   ├── pages/
+│   ├── App.css
+│   ├── App.jsx
+│   ├── firebaseConfig.js
+│   ├── index.css
+│   └── main.jsx
+├── .env.local
+├── .eslintrc.js
+├── .gitignore
+├── index.html
+├── package.json
+├── pnpm-lock.yaml
+├── postcss.config.js
+├── tailwind.config.js
+├── vite.config.js
+└── README.md
 ```
-*(Nota: Esta es una estructura sugerida, la estructura real puede variar.)*
 
 ---
 
@@ -149,21 +132,10 @@ conectaposts/
 *   **Enrutamiento:** React Router
 *   **Estilos:** Tailwind CSS, Flowbite
 *   **Cliente HTTP:** Axios
-*   **Backend/Base de Datos:** Firebase (Firestore, Authentication, etc.)
+*   **Backend/Base de Datos:** Firebase
+*   **Servidor de imagenes:** Cloudinary
 *   **Linting:** ESLint
 *   **Gestor de Paquetes:** pnpm
-
-![Node.js](https://commons.wikimedia.org/wiki/File:Node.js_logo.svg)
-
-!Express.js
-
-![Axios](https://commons.wikimedia.org/wiki/File:Axios_logo_%282020%29.svg)
-
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 ---
 
