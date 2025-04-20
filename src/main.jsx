@@ -15,6 +15,9 @@ import Login from './pages/Login.jsx'
 import Register from './pages/Register.jsx'
 import CreatePost from './pages/CreatePost.jsx'
 import Terms from './pages/Terms.jsx'
+import About from './pages/About.jsx'
+import PrivacyPolicy from './pages/PrivacyPolicy.jsx'
+import Contact from './pages/Contact.jsx'
 
 const router = createBrowserRouter([
   {
@@ -43,6 +46,18 @@ const router = createBrowserRouter([
       {
         path: '/terms',
         element: <Terms />,
+      },
+      {
+        path: '/about',
+        element: <About />,
+      },
+      {
+        path: '/privacy-policy',
+        element: <PrivacyPolicy />,
+      },
+      {
+        path: '/contact',
+        element: <Contact />,
       },
     ],
   },
