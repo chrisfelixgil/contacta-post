@@ -14,6 +14,7 @@ import Home from './pages/Home.jsx'
 import Login from './pages/Login.jsx'
 import Register from './pages/Register.jsx'
 import CreatePost from './pages/CreatePost.jsx'
+import Terms from './pages/Terms.jsx'
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
         path: '/create-post',
         element: <CreatePost />,
         // Aquí podríamos añadir lógica para proteger esta ruta más adelante
+      },
+      {
+        path: '/terms',
+        element: <Terms />,
       },
     ],
   },

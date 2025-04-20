@@ -18,6 +18,7 @@ export default function Register() {
   const [lastName, setLastName] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [termsAccepted, setTermsAccepted] = useState(false);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -33,6 +34,10 @@ export default function Register() {
     }
     if (!username || !firstName || !lastName || !password) {
       setError('Por favor, completa todos los campos.');
+      return;
+    }
+    if (!termsAccepted) {
+      setError('Debes aceptar los Términos y Condiciones para registrarte.');
       return;
     }
 
@@ -83,20 +88,24 @@ export default function Register() {
         <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
             <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
-              Crear una cuenta (Registro Directo Firestore - Inseguro)
+            Comparte ideas, conecta emociones.
             </h1>
+            <br />
+            <h2 className="text-lg font-bold leading-tight tracking-tight text-gray-900 md:text-xl dark:text-white">
+              Regístrate para crear una cuenta
+            </h2>
             <form className="space-y-4 md:space-y-6" onSubmit={handleRegister} noValidate>
               {/* Campo Usuario */}
               <div>
                 <label htmlFor="username" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Usuario</label>
                 <input 
-                  type="text" // Cambiado de email a text si username no es email
+                  type="text"
                   name="username" 
                   id="username" 
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="tu_usuario_unico" 
+                  placeholder="Username" 
                   required 
                 />
               </div>
@@ -156,13 +165,31 @@ export default function Register() {
                   required 
                 />
               </div>
-              {/* Checkbox Términos (simplificado - sin lógica de estado por ahora) */}
+              {/* Checkbox Términos */}
               <div className="flex items-start">
                 <div className="flex items-center h-5">
-                  <input id="terms" aria-describedby="terms" type="checkbox" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required />
+                  <input 
+                    id="terms"
+                    aria-describedby="terms"
+                    type="checkbox"
+                    checked={termsAccepted}
+                    onChange={(e) => setTermsAccepted(e.target.checked)}
+                    className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" 
+                    required
+                  />
                 </div>
                 <div className="ml-3 text-sm">
-                  <label htmlFor="terms" className="font-light text-gray-500 dark:text-gray-300">Acepto los <a className="font-medium text-primary-600 hover:underline dark:text-primary-500" href="#">Términos y Condiciones</a></label>
+                  <label htmlFor="terms" className="font-light text-gray-500 dark:text-gray-300">
+                    Acepto los{" "}
+                    <Link 
+                      to="/terms"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-medium text-primary-600 hover:underline dark:text-primary-500"
+                    >
+                      Términos y Condiciones
+                    </Link>
+                  </label>
                 </div>
               </div>
               {/* Mensaje de Error */}
