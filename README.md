@@ -25,17 +25,28 @@ Es el proyecto final de la materia de Programación Web impartida por el profeso
 
 ---
 
+## 🎬 Guía en Video
+
+Puedes ver una demostración del funcionamiento de la aplicación en el siguiente video:
+
+[![Guía de ConectaPosts](https://img.youtube.com/vi/FwVJqLNeFpo/0.jpg)](https://youtu.be/FwVJqLNeFpo)
+
+---
+
 ## 📸 Capturas de Pantalla
 
-A continuación, se muestran capturas de pantalla de las evidencias al realizar esta asignación:
+A continuación, se muestran capturas de pantalla del proyecto:
 
-1. ![Captura 1](/public/img/img1.png)
-2. ![Captura 2](/public/img/img2.png)
-3. ![Captura 3](/public/img/img3.png)
-4. ![Captura 4](/public/img/img4-1.png)
-5. ![Captura 4](/public/img/img5.png)
-6. ![Captura 4](/public/img/img6.png)
-7. ![Captura 4](/public/img/img7.png)
+1.  ![Server Running](img/img1-server-run.png)
+2.  ![Web Interface 1](img/img2-web1.png)
+3.  ![Web Interface 2](img/img3-web2.png)
+4.  ![Register Page](img/img4-register.png)
+5.  ![Login Page](img/img5-login.png)
+6.  ![User Logged In](img/img6-user-logged.png)
+7.  ![Create Post](img/img7-create-post.png)
+8.  ![Firebase User Document](img/img8-firebase-userDocument.png)
+9.  ![Firebase Posts Document](img/img9-firebase-postsDocument.png)
+10. ![Cloudinary Integration](img/img10-cloudinary.png)
 
 ---
 
